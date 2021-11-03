@@ -9,6 +9,7 @@ import logging
 
 from jass.service.player_service_app import PlayerServiceApp
 from jass.agents.agent_random_schieber import AgentRandomSchieber
+from jass.agents.agent_bot_001 import AgentBot001
 
 
 def create_app():
@@ -30,6 +31,7 @@ def create_app():
 
     # add some players
     app.add_player('random', AgentRandomSchieber())
+    app.add_player('Agent001', AgentBot001())
 
     return app
 
