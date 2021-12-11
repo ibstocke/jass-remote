@@ -10,6 +10,7 @@ import logging
 from jass.service.player_service_app import PlayerServiceApp
 from jass.agents.agent_random_schieber import AgentRandomSchieber
 from jass.agents.agent_bot_001 import AgentBot001
+from jass.agents.agent_bot_002 import AgentBot002
 
 
 def create_app():
@@ -19,7 +20,7 @@ def create_app():
 
         export FLASK_APP=player_service.py
         export FLASK_ENV=development
-        flask run --host=0.0.0.0 --port=8888
+        flask run --host=0.0.0.0 --port=8080
     """
     logging.basicConfig(level=logging.DEBUG)
 
@@ -32,6 +33,7 @@ def create_app():
     # add some players
     app.add_player('random', AgentRandomSchieber())
     app.add_player('Agent001', AgentBot001())
+    app.add_player('Agent002', AgentBot002())
 
     return app
 
