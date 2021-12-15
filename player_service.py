@@ -31,7 +31,7 @@ def create_app():
     # app.config.from_pyfile('my_player_service.cfg', silent=False)
 
     # add some players
-    app.add_player('random', AgentRandomSchieber())
+    # app.add_player('random', AgentRandomSchieber())
     app.add_player('Agent001', AgentBot001())
     app.add_player('Agent002', AgentBot002())
 
